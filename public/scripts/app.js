@@ -30,7 +30,7 @@ let db = [
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 };
 
@@ -62,6 +62,8 @@ const createTweetElement = function(tweetOb) {
 $(document).ready(function() {
   renderTweets(db);
 
+  
+
   //using AJAX to handle POST requests
   let submitForm = $('.post-tweet');
   submitForm.submit(function(event) {
@@ -76,5 +78,15 @@ $(document).ready(function() {
         console.log('something: ', data);
       }); // end then
     event.preventDefault();
+    // loadTweets(); //putting it here loads on every push of btn
   }); //end submit
+    
+  const loadTweets = function() {
+    $.ajax('/tweets/', {method: 'GET'})
+      .then(function(something) {
+        console.log('somethings happening');
+        renderTweets(something);
+      }); //end then
+  };
+  loadTweets(); //this loads them all on refresh
 }); //end ready
