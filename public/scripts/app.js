@@ -122,16 +122,21 @@ $(document).ready(function() {
       data: $(this).children('textarea').serialize(),
       beforeSend: () => {
         if ($('.post-tweet textarea').val() === '') {
-          console.log("whoah there partner");
-          alert("tweet field must not be empty");
+          $('.empty').slideToggle();
+          $('.too-long').hide(400);
+          // alert("tweet field must not be empty");
           return false;
         } else if ($('.post-tweet textarea').val().length > 140) {
-          console.log("whoah there partner");
-          alert("you have too much to say. limit is 140 characters");
+          $('.too-long').slideToggle();
+          $('.empty').hide(400);
+
+          // alert("you have too much to say. limit is 140 characters");
           return false;
         }
         // console.log(event);
         // console.log($('.post-tweet textarea').val());
+        $('.empty').hide(400);
+        $('.too-long').hide(400);
         return true;
       }
     })

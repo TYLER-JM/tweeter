@@ -38,6 +38,19 @@ main {
 .to-top:hover {
   cursor: pointer;
 }
+.error {
+  border: 3px solid red;
+  background-color: rgba(180, 28, 28, 0.2);
+  margin: 1em 0;
+  padding: 0.3em;
+  font-size: 1.2rem;
+}
+.too-long {
+  display: none;
+}
+.empty {
+  display: none;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
