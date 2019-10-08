@@ -10,13 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
- /* nav {
-   font-family: 'Bungee';
- } */
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -24,6 +18,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   padding-top: 120px;
 }
+
+/*can I remove this class?*/
 .shift {
   position: relative;
   top: 120px;
@@ -32,6 +28,15 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
+}
+.to-top {
+  position: fixed;
+  top: 92%;
+  left: 90%;
+  display: none;
+}
+.to-top:hover {
+  cursor: pointer;
 }
 
 /*

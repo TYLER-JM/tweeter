@@ -24,7 +24,13 @@ nav span {
 .new-slider img {
   width: 40px;
   height: 40px;
+  transform: rotateX(0deg);
+  transition: all 0.65s;
 }
 .new-slider img:hover {
   cursor: pointer;
+}
+img.rotate {
+  transform: rotateX(-180deg);
+  transition: all 0.65s;
 }
