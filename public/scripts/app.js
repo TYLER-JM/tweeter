@@ -123,7 +123,7 @@ $(document).ready(function() {
       beforeSend: () => {
         if ($('.post-tweet textarea').val() === '') {
           console.log("whoah there partner");
-          alert("tweet feild must not be empty");
+          alert("tweet field must not be empty");
           return false;
         } else if ($('.post-tweet textarea').val().length > 140) {
           console.log("whoah there partner");
