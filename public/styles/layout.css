@@ -52,6 +52,17 @@ main {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    grid-area: 1/2/2/3;
+  }
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
