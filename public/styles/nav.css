@@ -1,0 +1,18 @@
+nav {
+  position: fixed;
+  top: 0px;
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: #4056a1;
+  color: #fff;
+  padding: 1.5em;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}

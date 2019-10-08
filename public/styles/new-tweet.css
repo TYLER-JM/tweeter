@@ -1,0 +1,37 @@
+form {
+  display: grid;
+  grid-template-areas: "tweet tweet"
+                       "input span";
+  margin: 1em 0em;
+}
+
+form textarea {
+  /* max-length: 140; */
+  grid-area: tweet;
+  width: 100%;
+  height: auto;
+  line-height: 1em;
+  resize: none;
+  border: none;
+  background-color: #f4f1ec;
+  border-bottom: 4px solid #444;
+}
+form input {
+  grid-area: input;
+  background-color: #4056a1;
+  color: #fff;
+  border: none;
+  font-family: "Bungee", sans-serif;
+  width: 5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+form span {
+  grid-area: span;
+  text-align: right;
+  font-family: "Bungee", sans-serif;
+  margin-top: 0.5em;
+}
+.over-limit {
+  color: red;
+}
