@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('.slide-btn').on('click', function() {
     $('.new-tweet').slideToggle(400);
-    $('.slide-btn').toggleClass('rotate');
+    $(this).toggleClass('rotate');
   });
 
   $(document).scroll(function() {
