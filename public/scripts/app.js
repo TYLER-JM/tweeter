@@ -72,7 +72,16 @@ $(document).ready(function() {
     $.ajax({
       type: 'POST',
       url: $('.post-tweet').attr('action'),
-      data: $('.post-tweet textarea').serialize()
+      data: $('.post-tweet textarea').serialize(),
+      beforeSend: () => {
+        // console.log($('.post-tweet textarea'));
+        if (this.data === '') {
+          console.log("whoah there partner");
+          alert("whoah there partner");
+          return false;
+        }
+        return true;
+      }
     })
       .then(function(data) {
         console.log('something: ', data);
