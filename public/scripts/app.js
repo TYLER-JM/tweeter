@@ -34,6 +34,12 @@ const renderTweets = function(tweets) {
   }
 };
 
+const makeSafeTweet = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetOb) {
   let date = new Date(tweetOb.created_at);
   let stringDate = date.toLocaleDateString();
@@ -46,7 +52,7 @@ const createTweetElement = function(tweetOb) {
       </div>
       <div class="handle">${tweetOb.user.handle}</div>
     </header>
-    <div>${tweetOb.content.text}</div>
+    <div>${makeSafeTweet(tweetOb.content.text)}</div>
     <footer>
       <time datetime="${stringDate}">${date.toDateString()}</time>
       <div class="social">
@@ -58,6 +64,44 @@ const createTweetElement = function(tweetOb) {
   </article>
   `;
 };
+//handle get requests
+const loadTweets = function() {
+  $.ajax('/tweets/', {method: 'GET'})
+    .then(function(something) {
+      renderTweets(something);
+    }); //end then
+};
+
+
+//defining it outside the docready
+/*
+
+const handleSubmit = (evt) => {
+  $.ajax({
+    type: 'POST',
+    url: $(this).attr('action'),
+    data: $(this).children('textarea').serialize(),
+    beforeSend: () => {
+      if ($('.post-tweet textarea').val() === '') {
+        console.log("whoah there partner");
+        alert("tweet feild must not be empty");
+        return false;
+      } else if ($('.post-tweet textarea').val().length > 140) {
+        console.log("whoah there partner");
+        alert("you have too much to say. limit is 140 characters");
+        return false;
+      }
+      // console.log(event);
+      // console.log($('.post-tweet textarea').val());
+      return true;
+    }
+  })
+    .then(function() {
+      loadTweets();
+    }); // end then
+  evt.preventDefault();
+};
+*/
 
 $(document).ready(function() {
   renderTweets(db);
@@ -65,37 +109,38 @@ $(document).ready(function() {
   
 
   //using AJAX to handle POST requests
+  //COULD DEFINE A FUNCTION TO PASS INTO SUBMITTION\
+  //AND NOT USE ANON FUNC
   let submitForm = $('.post-tweet');
   submitForm.submit(function(event) {
-    console.log('form is doing something');
-    // console.log(event);
+    // console.log('form is doing something');
+    // console.log('EVENT:', event);
     $.ajax({
       type: 'POST',
-      url: $('.post-tweet').attr('action'),
-      data: $('.post-tweet textarea').serialize(),
+      url: $(this).attr('action'),
+      /* '.post-tweet textarea' */
+      data: $(this).children('textarea').serialize(),
       beforeSend: () => {
-        // console.log($('.post-tweet textarea'));
-        if (this.data === '') {
+        if ($('.post-tweet textarea').val() === '') {
           console.log("whoah there partner");
-          alert("whoah there partner");
+          alert("tweet feild must not be empty");
+          return false;
+        } else if ($('.post-tweet textarea').val().length > 140) {
+          console.log("whoah there partner");
+          alert("you have too much to say. limit is 140 characters");
           return false;
         }
+        // console.log(event);
+        // console.log($('.post-tweet textarea').val());
         return true;
       }
     })
-      .then(function(data) {
-        console.log('something: ', data);
+      .then(function() {
+        // console.log(stuff);
+        loadTweets();
       }); // end then
     event.preventDefault();
-    // loadTweets(); //putting it here loads on every push of btn
   }); //end submit
     
-  const loadTweets = function() {
-    $.ajax('/tweets/', {method: 'GET'})
-      .then(function(something) {
-        console.log('somethings happening');
-        renderTweets(something);
-      }); //end then
-  };
-  loadTweets(); //this loads them all on refresh
+  loadTweets(); //to do the initial load
 }); //end ready
