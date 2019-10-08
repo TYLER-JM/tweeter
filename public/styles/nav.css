@@ -16,3 +16,15 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
+.new-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-slider img {
+  width: 40px;
+  height: 40px;
+}
+.new-slider img:hover {
+  cursor: pointer;
+}
