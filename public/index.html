@@ -37,10 +37,10 @@
       <span>tweeter</span>
       <div class="new-slider">
         <p><strong>Write</strong> a new tweet</p>
-        <img class="slide-btn" src="/images/down.png">
+        <img class="slide-btn rotate" src="/images/up.png">
       </div>
     </nav>
-    <header class="hero">
+    <header id="top" class="hero">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -53,52 +53,16 @@
 
     <!-- compose new tweet -->
     <main class="container">
+      <div class="to-top"><a href="#top"><img src="/images/up.png"></a></div>
       <scetion class="new-tweet">
-        <form class="post-tweet" action="/tweets/" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </scetion>
-
+          <form class="post-tweet" action="/tweets/" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </scetion>
       <!--list of tweets-->
       <section id="tweets-container">
-        <article class="tweet">
-          <header>
-            <div>
-              <img src="/images/profile-hex.png" alt="a simple avatar">
-              <h4>My Name</h4>
-            </div>
-            <div class="handle">@myHandle</div>
-          </header>
-          <div>This div includes the body of the tweet</div>
-          <footer>
-            <time>10 days ago</time>
-            <div class="social">
-              <img src="/images/flag.png">
-              <img src="/images/like.png">
-              <img src="/images/rt-arrow.png">
-            </div>
-          </footer>
-        </article>
-        <article class="tweet">
-          <header>
-            <div>
-              <img src="/images/ex-avatar.png" alt="a simple avatar">
-              <h4>Your Name</h4>
-            </div>
-            <div class="handle">@yourHandle</div>
-          </header>
-          <div>This is another tweet here</div>
-          <footer>
-            <time>2 days ago</time>
-            <div class="social">
-              <img src="/images/flag.png">
-              <img src="/images/like.png">
-              <img src="/images/rt-arrow.png">
-            </div>
-          </footer>
-        </article>
       </section>
     </main>
     <footer class="footer">
