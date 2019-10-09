@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('.slide-btn').on('click', function() {
     $('.new-tweet').slideToggle(400);
     $(this).toggleClass('rotate');
+    $('.new-tweet textarea').focus();
   });
 
   $(document).scroll(function() {
