@@ -6,6 +6,11 @@ Tweeter is a single-page AJAX-based Twitter clone using jQuery, HTML5, and CSS3.
 
 ![some of the features of the app](docs/feature-examples.gif)
 
+![a narrower view](docs/under-1024.png)
+
+![a mobile view](docs/phone-size.png)
+
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
