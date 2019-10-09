@@ -56,6 +56,10 @@ article.tweet:hover .handle {
   font-size: 1rem;
 }
 .social img {
+  display: none;
   height: 1em;
   width: 1em;
+}
+article.tweet:hover .social img {
+  display: inline;
 }
