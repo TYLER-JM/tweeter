@@ -143,6 +143,7 @@ $(document).ready(function() {
       .then(function() {
         loadTweets();
         $('.post-tweet textarea').val('');
+        $('.post-tweet .counter').text('140');
       }); // end then
     event.preventDefault();
   }); //end submit

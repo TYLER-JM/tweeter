@@ -7,5 +7,5 @@ $(document).ready(function() {
     } else if (counter.text() >= 0) {
       counter.removeClass('over-limit');
     }
-  }); //end on keyup
+  }); //end and keyup
 });
