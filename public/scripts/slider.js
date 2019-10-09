@@ -5,6 +5,8 @@ $(document).ready(function() {
     $('.new-tweet textarea').focus();
   });
 
+  //display button that can send user to the top
+  //of the page when scrolling far enough
   $(document).scroll(function() {
     let y = $(this).scrollTop();
     if (y > 600) {
