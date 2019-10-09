@@ -8,13 +8,16 @@
   background-color:  #da9a4e;
   background-image: url("../images/asfalt-light.png");
 }
+.hero h2 {
+  margin: 0;
+}
 @media (min-width: 1024px) {
   .hero {
-    height: 60%;
+    height: 15em;
     max-width: 34%;
     position: fixed;
-    top: 25%;
-    left: 7%;
+    top: 7em;
+    left: 4.5%;
   }
   .hero img {
     height: 8em;

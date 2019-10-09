@@ -49,3 +49,11 @@ img.rotate {
     background-image: none;
   }
 }
+@media (max-width: 375px) {
+  .new-slider p {
+    display: none;
+  }
+  nav {
+    justify-content: space-around;
+  }
+}

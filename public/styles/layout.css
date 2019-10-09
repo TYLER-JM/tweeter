@@ -32,7 +32,7 @@ main {
 .to-top {
   position: fixed;
   top: 92%;
-  left: 90%;
+  right: 1.5em;
   display: none;
 }
 .to-top:hover {
@@ -63,6 +63,8 @@ main {
     margin: auto;
     grid-area: 1/2/2/3;
   }
+  /*add another element that is on the left, housing hero*/
+
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
