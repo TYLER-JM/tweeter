@@ -1,3 +1,4 @@
+//handling the counter shown beneath the compose-tweet textarea
 $(document).ready(function() {
   $('.new-tweet textarea').on('keyup', function() {
     let counter = $(this).siblings('.counter');
