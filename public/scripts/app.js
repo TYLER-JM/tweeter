@@ -51,41 +51,7 @@ const loadTweets = function() {
     }); //end then
 };
 
-
-//defining it outside the docready
-/*
-
-const handleSubmit = (evt) => {
-  $.ajax({
-    type: 'POST',
-    url: $(this).attr('action'),
-    data: $(this).children('textarea').serialize(),
-    beforeSend: () => {
-      if ($('.post-tweet textarea').val() === '') {
-        console.log("whoah there partner");
-        alert("tweet feild must not be empty");
-        return false;
-      } else if ($('.post-tweet textarea').val().length > 140) {
-        console.log("whoah there partner");
-        alert("you have too much to say. limit is 140 characters");
-        return false;
-      }
-      // console.log(event);
-      // console.log($('.post-tweet textarea').val());
-      return true;
-    }
-  })
-    .then(function() {
-      loadTweets();
-    }); // end then
-  evt.preventDefault();
-};
-*/
-
 $(document).ready(function() {
-  // renderTweets(db);
-
-  
 
   //using AJAX to handle POST requests
   let submitForm = $('.post-tweet');
