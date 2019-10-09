@@ -29,6 +29,7 @@ article.tweet:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-grow: 2;
 }
 .handle {
   display: none;
