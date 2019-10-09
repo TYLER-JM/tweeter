@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   top: 0px;
-  height: 70px; /*change*/
+  height: 70px;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -10,9 +10,6 @@ nav {
   z-index: 1;
   background-color:  #da9a4e;
   background-image: url("../images/asfalt-light.png");
-  /*
-  background-color: #4056a1;
-  */
   color: #fff;
 
   padding: 1.5em;
