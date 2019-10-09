@@ -1,6 +1,10 @@
 # Tweeter Project
 
-Tweeter is a single-page AJAX-based Twitter clone using jQuery, HTML5, and CSS3. Building upon HTML, CSS, JS, jQuery and AJAX front-end skills.
+Tweeter is a single-page AJAX-based Twitter clone using jQuery, HTML5, and CSS3. Building upon HTML, CSS, JS, jQuery and AJAX front-end skills. With a focus on responsive design using CSS
+
+## Final Product
+
+![some of the features of the app](docs/feature-examples.gif)
 
 ## Getting Started
 
@@ -16,7 +20,7 @@ Tweeter is a single-page AJAX-based Twitter clone using jQuery, HTML5, and CSS3.
 - Express
 - Node 5.10.x or above
 
-##Dev Dependencies
+### Dev Dependencies
 
 - Nodemon
 - eslint
