@@ -3,7 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+
 let db = [
+  /*
   {
     "user": {
       "name": "Newton",
@@ -26,7 +29,9 @@ let db = [
     },
     "created_at": 1461113959088
   }
+  */
 ];
+
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
