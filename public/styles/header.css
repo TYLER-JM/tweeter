@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:  #da9a3e;
+  background-color:  #da9a4e;
   background-image: url("../images/asfalt-light.png");
 }
 @media (min-width: 1024px) {

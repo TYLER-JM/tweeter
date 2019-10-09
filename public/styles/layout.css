@@ -16,7 +16,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  padding-top: 120px;
+  padding-top: 70px;
 }
 
 /*can I remove this class?*/
@@ -55,6 +55,7 @@ main {
 @media (min-width: 1024px) {
   body {
     display: grid;
+    padding-top: 120px;
     grid-template-columns: 2fr 3fr;
   }
   .container {
