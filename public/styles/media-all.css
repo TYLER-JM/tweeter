@@ -1,9 +1,0 @@
-@media (min-width: 1024px) {
-  .hero {
-    height: 400px;
-    width: 400px;
-    position: fixed;
-    top: 25%;
-    left: 7%;
-  }
-}
