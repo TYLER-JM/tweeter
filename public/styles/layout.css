@@ -24,7 +24,6 @@ body {
   position: relative;
   top: 120px;
 }
-
 main {
   width: 90%;
   margin: 0 auto;
@@ -56,16 +55,11 @@ main {
   body {
     display: grid;
     padding-top: 120px;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 40% 60%;
   }
   .container {
     width: 90%;
     margin: auto;
     grid-area: 1/2/2/3;
   }
-  /*add another element that is on the left, housing hero*/
-
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

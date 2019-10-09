@@ -43,6 +43,8 @@ article.tweet:hover .handle {
   padding: 1em 0.4em;
   margin: 0 auto;
   height: auto;
+  overflow-wrap: break-word;
+  /* white-space: wrap; */
 }
 .tweet footer {
   display: flex;
