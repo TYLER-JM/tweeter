@@ -5,35 +5,8 @@
  */
 
 
-let db = [
-  /*
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-  */
-];
-
-
 const renderTweets = function(tweets) {
+  $('#tweets-container').empty();
   for (let tweet of tweets) {
     $('#tweets-container').prepend(createTweetElement(tweet));
   }
@@ -48,6 +21,7 @@ const makeSafeTweet = function(str) {
 const createTweetElement = function(tweetOb) {
   let date = new Date(tweetOb.created_at);
   let stringDate = date.toLocaleDateString();
+  let tod = date.toLocaleTimeString('en-US');
   return `
   <article class="tweet">
     <header>
@@ -59,7 +33,7 @@ const createTweetElement = function(tweetOb) {
     </header>
     <div>${makeSafeTweet(tweetOb.content.text)}</div>
     <footer>
-      <time datetime="${stringDate}">${date.toDateString()}</time>
+      <time datetime="${stringDate}">${tod}, ${date.toDateString()}</time>
       <div class="social">
         <img src="/images/flag.png">
         <img src="/images/like.png">
@@ -109,21 +83,16 @@ const handleSubmit = (evt) => {
 */
 
 $(document).ready(function() {
-  renderTweets(db);
+  // renderTweets(db);
 
   
 
   //using AJAX to handle POST requests
-  //COULD DEFINE A FUNCTION TO PASS INTO SUBMITTION\
-  //AND NOT USE ANON FUNC
   let submitForm = $('.post-tweet');
   submitForm.submit(function(event) {
-    // console.log('form is doing something');
-    // console.log('EVENT:', event);
     $.ajax({
       type: 'POST',
       url: $(this).attr('action'),
-      /* '.post-tweet textarea' */
       data: $(this).children('textarea').serialize(),
       beforeSend: () => {
         if ($('.post-tweet textarea').val() === '') {
@@ -148,5 +117,6 @@ $(document).ready(function() {
     event.preventDefault();
   }); //end submit
     
-  loadTweets(); //to do the initial load
+  //to do the initial load
+  loadTweets();
 }); //end ready
