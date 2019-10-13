@@ -3,8 +3,9 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+:root {
   box-sizing: border-box;
+  font-size: calc(0.7em + 1vw);
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,9 +15,12 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  /* font-size: 24px; */
   font-family: 'Source Sans Pro', sans-serif;
   padding-top: 70px;
+}
+.bigger {
+  font-size: 1.8rem;
 }
 
 /*can I remove this class?*/
