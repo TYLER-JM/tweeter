@@ -36,4 +36,3 @@ A look at the mobile view:
 - improve the way the date is displayed at the bottom of each tweet
 - add `{ curser: pointer }` to the *like*, *rt*, and *flag* icons on `:hover`
 - make font sizes adjust to accomodate small screens.
-- this could be a good opportunity to practice using SASS
