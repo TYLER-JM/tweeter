@@ -4,12 +4,12 @@ Tweeter is a single-page AJAX-based Twitter clone using jQuery, HTML5, and CSS3.
 
 ## Final Product
 
-![some of the features of the app](docs/feature-examples.gif)
+![some of the features of the app](pics/feature-examples.gif)
 
-![a narrower view](docs/under-1024.png)
+![a narrower view](pics/under-1024.png)
 
 A look at the mobile view:
-![a mobile view](docs/phone-size.png)
+![a mobile view](pics/phone-size.png)
 
 
 ## Getting Started
